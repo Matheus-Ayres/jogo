@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://cqee6jmirjmu4"]
+
+[ext_resource type="PackedScene" uid="uid://wekp40rha3nn" path="res://scenes/jogador/jogador.tscn" id="1_jby54"]
+[ext_resource type="Texture2D" uid="uid://b725cxc2q8acm" path="res://assets/tiles/sprite_chao/terra.png" id="2_2k1nt"]
+[ext_resource type="Texture2D" uid="uid://b33ignxn3htn7" path="res://assets/tiles/Clouds/Clouds 3/1.png" id="2_b7tep"]
+[ext_resource type="Texture2D" uid="uid://cc5k8oi2ayuiq" path="res://assets/tiles/Clouds/Clouds 3/3.png" id="4_bwoop"]
+[ext_resource type="Texture2D" uid="uid://bovpmfwl6jx6g" path="res://assets/tiles/sprite_chao/terra-com-grama.png" id="5_21rqo"]
+[ext_resource type="Texture2D" uid="uid://bncasumfd06fk" path="res://assets/tiles/Clouds/Clouds 3/4.png" id="5_rjwl0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wuscg"]
+texture = ExtResource("5_21rqo")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ps00"]
+texture = ExtResource("2_2k1nt")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_q42by"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_wuscg")
+sources/1 = SubResource("TileSetAtlasSource_0ps00")
+
+[node name="jogo" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_q42by")
+format = 2
+layer_0/tile_data = PackedInt32Array(2949155, 0, 0, 2949156, 0, 0, 2949157, 0, 0, 2949158, 0, 0, 2949159, 0, 0, 2949160, 0, 0, 2949161, 0, 0, 2949162, 0, 0, 2949163, 0, 0, 2949164, 0, 0, 2949165, 0, 0, 2949166, 0, 0, 2949167, 0, 0, 2949168, 0, 0, 2949169, 0, 0, 2949170, 0, 0, 2949171, 0, 0, 2949172, 0, 0, 2949173, 0, 0, 2949174, 0, 0, 2949175, 0, 0, 2949176, 0, 0, 2949177, 0, 0, 2949178, 0, 0, 2949179, 0, 0, 2949180, 0, 0, 2949181, 0, 0, 2949182, 0, 0, 2949183, 0, 0, 2949184, 0, 0, 2949185, 0, 0, 2949186, 0, 0, 2949187, 0, 0, 2949188, 0, 0, 2949189, 0, 0, 2949190, 0, 0, 2949191, 0, 0, 2949192, 0, 0, 2949193, 0, 0, 2949194, 0, 0, 2949195, 0, 0, 2949196, 0, 0, 2949197, 0, 0, 2949198, 0, 0, 2949199, 0, 0, 2949120, 1, 0, 2949121, 0, 0, 2949122, 0, 0, 2949123, 0, 0, 2949124, 0, 0, 2949125, 0, 0, 2949126, 0, 0, 2949127, 0, 0, 2949128, 0, 0, 2949129, 0, 0, 2949130, 0, 0, 2949131, 0, 0, 2949132, 0, 0, 2949133, 0, 0, 2949134, 0, 0, 2949135, 0, 0, 2949136, 0, 0, 2949137, 0, 0, 2949138, 0, 0, 2949139, 0, 0, 2949140, 0, 0, 2949141, 0, 0, 2949142, 0, 0, 2949143, 0, 0, 2949144, 0, 0, 2949145, 0, 0, 2949146, 0, 0, 2949147, 0, 0, 2949148, 0, 0, 2949149, 0, 0, 2949150, 0, 0, 2949151, 0, 0, 2949152, 0, 0, 2949153, 0, 0, 2949154, 0, 0, 2883584, 1, 0, 2818048, 1, 0, 2752512, 1, 0, 2686976, 1, 0, 2621440, 1, 0, 2555904, 1, 0, 2490368, 1, 0, 2424832, 0, 0, 2293760, 1, 0, 2228224, 1, 0, 2162688, 0, 0, 2097152, 1, 0, 2031616, 1, 0, 1966080, 1, 0, 1900544, 1, 0, 1835008, 1, 0, 1769472, 1, 0, 1703936, 1, 0, 1638400, 1, 0, 1572864, 1, 0, 1507328, 1, 0, 1441792, 1, 0, 1376256, 1, 0, 1310720, 1, 0, 2359296, 0, 0)
+
+[node name="jogador" parent="." instance=ExtResource("1_jby54")]
+position = Vector2(205, 591)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
+
+[node name="1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1"]
+position = Vector2(-1, 288)
+texture = ExtResource("2_b7tep")
+centered = false
+
+[node name="3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3"]
+position = Vector2(-3, 286)
+texture = ExtResource("4_bwoop")
+centered = false
+
+[node name="4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/4"]
+position = Vector2(1, 286)
+texture = ExtResource("5_rjwl0")
+centered = false
